@@ -1,0 +1,8 @@
+node cli.js -i "https://youtube.com/playlist?list=PLwKZwhXs7EKyNpxssu0plfr3N4Gwg3zPw" -o "/d/truyen-linh-vu-thien-ha"
+
+node cli.js -i "https://www.youtube.com/playlist?list=PLjH-SjDtvPsO00Yd3xO6Wy7i1uFLf5uaK" -o "/d/truyen-yeu-long-co-de"
+
+node cli.js -i "https://www.youtube.com/playlist?list=PLwKZwhXs7EKzhdlbzzkiXA1uiYzSrq9eL" -o "/d/truyen-the-gioi-hoan-my"
+
+node cli.js  -i "https://www.youtube.com/playlist?list=PLwKZwhXs7EKxeypNnL3mK9BlOJ7F75CHK" -o "/d/truyen-tien-nghich"
+
