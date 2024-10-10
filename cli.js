@@ -22,17 +22,6 @@ function titleToFilename(title) {
     return slugify(title)
 }
 
-function titleToSlug(title) {
-    return title
-        .toLowerCase()                  // Convert to lowercase
-        .trim()                         // Trim whitespace from both sides
-        .replace(/[\s]+/g, '-')        // Replace spaces with dashes
-        .replace(/[^\w\-]+/g, '')      // Remove all non-word chars except dashes
-        .replace(/--+/g, '-')          // Replace multiple dashes with a single dash
-        .replace(/^-+|-+$/g, '');      // Remove dashes from the start and end
-}
-
-
 function getFullPathFile(name, outputDirectory) {
     return path.resolve(process.cwd(), outputDirectory, `${name}.mp3`)
 }
@@ -62,11 +51,14 @@ async function downloadAudioFromPlaylist(playlistUrl, outputDirectory) {
 
         for (const videoId of videoIds) {
             const info = await ytdl.getFullInfo(`https://www.youtube.com/watch?v=${videoId}`);
-            console.log('Start download: ', info.videoDetails.title);
-            const checkPathExist = fs.pathExistsSync(getFullPathFile(titleToFilename(info.videoDetails.title), outputDirectory)) || fs.pathExistsSync(getFullPathFile(titleToSlug(info.videoDetails.title), outputDirectory))
+            const title = info.videoDetails.title;
+            const pathFileNew = getFullPathFile(titleToFilename(title), outputDirectory)
+
+            console.log('Start download: ', title);
+            const checkPathExist = fs.pathExistsSync(pathFileNew) 
 
             if (checkPathExist) {
-                console.log(`Skip download ${info.videoDetails.title}`);
+                console.log(`Skip download ${title}`);
 
                 continue;
             }
