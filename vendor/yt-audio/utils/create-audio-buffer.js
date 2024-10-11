@@ -8,7 +8,6 @@ const { PassThrough, Readable } = require("stream")
 
 async function fetchVideo(format, headers) {
   `Fetching data bytes ${format.mimeType}`
-
   const response = await axios.get(format.url, {
     headers,
     responseType: "arraybuffer",

@@ -21,7 +21,7 @@ const fetchHtmlPage = async (id, options) => {
     logger(`Fetching html page: ${url}...`)
   }
 
-  const userAgent = getRandomUserAgent()
+  const userAgent = getRandomUserAgent();
 
   const headers = {
     "User-Agent": userAgent,

@@ -6,6 +6,3 @@ node cli.js -i "https://www.youtube.com/playlist?list=PLwKZwhXs7EKzhdlbzzkiXA1ui
 
 node cli.js -i "https://www.youtube.com/playlist?list=PLwKZwhXs7EKxeypNnL3mK9BlOJ7F75CHK" -o "/d/truyen-tien-nghich"
 
-node cli.js -i "https://youtube.com/playlist?list=RD0cROAMV0P10&playnext=1&si=FG2Okod2C0BM4d-p" -o "/d/d1"
-
-node cli.js -i "https://youtube.com/playlist?list=RDrn7Gy7x9ZQE&playnext=1&si=4vUOjwbOwrSMbeTy" -o "/d/d2"
